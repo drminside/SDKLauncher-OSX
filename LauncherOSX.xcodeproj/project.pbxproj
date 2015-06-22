@@ -976,8 +976,10 @@
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/readium-sdk/Platform/Apple/include",
 					/usr/include/libxml2,
+					"$(SRCROOT)/readium-sdk/ePub3/ThirdParty/openssl-ios/include",
 				);
 				INFOPLIST_FILE = "LauncherOSX/LauncherOSX-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/readium-sdk/ePub3/ThirdParty/openssl-ios/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/readium-sdk/Platform/Apple\"/**";
@@ -995,8 +997,10 @@
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/readium-sdk/Platform/Apple/include",
 					/usr/include/libxml2,
+					"$(SRCROOT)/readium-sdk/ePub3/ThirdParty/openssl-ios/include",
 				);
 				INFOPLIST_FILE = "LauncherOSX/LauncherOSX-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/readium-sdk/ePub3/ThirdParty/openssl-ios/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/readium-sdk/Platform/Apple\"/**";
