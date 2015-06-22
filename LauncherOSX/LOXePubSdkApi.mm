@@ -39,13 +39,18 @@
 #import "LOXSpineItem.h"
 #import "LOXPackage.h"
 
-
+#include <LCP/authentication_handler.h>
+#import "LOXCredentialController.h"
+#import "LOXAppDelegate.h"
+#import <ePub3/user_action.h>
 
 @interface LOXePubSdkApi ()
 
 - (void)cleanup;
 
 - (void)readPackages;
+
+- (void) setReq:(ePub3::CredentialRequest&)_req;
 
 @end
 
@@ -55,6 +60,15 @@
     ePub3::ContainerPtr _container;
 
     LOXPackage* _currentPackage;
+    
+    ePub3::CredentialRequest* req;
+    
+    id thisClass;
+}
+
+- (void) setReq:(ePub3::CredentialRequest&)_req
+{
+    req = &_req;
 }
 
 static BOOL m_ignoreRemainingErrors = NO;
@@ -114,6 +128,15 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
     ePub3::InitializeSdk();
     ePub3::PopulateFilterManager();
+    
+    ePub3::AuthenticationHandlerFn launcherAuthenticationHandler = LauncherAuthenticationHandler;
+    ePub3::SetAuthenticationHandler(launcherAuthenticationHandler);
+}
+
+void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)
+{
+    LOXCredentialController *lcc = [[LOXCredentialController alloc] init];
+    [lcc openDlgFromCredentialRequest:request];
 }
 
 - (id)init
@@ -124,6 +147,8 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
         _packages = [NSMutableArray array];
     }
+    //hslee
+    thisClass = self;
 
     return self;
 }
@@ -134,6 +159,10 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
      _container = ePub3::Container::OpenContainer([file UTF8String]);
 
+    if(_container == nullptr) {
+        return nil;
+    }
+    
     [self readPackages];
 
     if([_packages count] > 0) {
@@ -145,11 +174,13 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
 - (void)readPackages
 {
-    auto packages = _container->Packages();
+    if(_container != nullptr) {
+        auto packages = _container->Packages();
 
-    for (auto package = packages.begin(); package != packages.end(); ++package) {
+        for (auto package = packages.begin(); package != packages.end(); ++package) {
 
-        [_packages addObject:[[LOXPackage alloc] initWithSdkPackage:*package]];
+            [_packages addObject:[[LOXPackage alloc] initWithSdkPackage:*package]];
+        }
     }
 }
 
@@ -166,9 +197,18 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
     _currentPackage = nil;
 }
 
-
-
-
-
+- (bool) checkActionPrint
+{
+    if(_container->Creator() != nullptr){
+        ePub3::async_result<bool> result = _container->Creator()->ApproveUserAction(ePub3::UserAction(ePub3::ConstManifestItemPtr(nullptr), ePub3::CFI(), ePub3::ActionType::Print));
+        
+        return result.get();
+    }
+    else
+    {
+        return false;
+    }
+    
+}
 
 @end

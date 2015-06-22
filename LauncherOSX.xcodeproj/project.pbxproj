@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BA7D9421B3864240055CF20 /* LOXCredentialController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7D9411B3864240055CF20 /* LOXCredentialController.mm */; };
 		552FC46616F39AB5000E73BA /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 552FC46516F39AB5000E73BA /* icon.icns */; };
 		83766D441A0E9C53008077E1 /* epubReadingSystem.js in Resources */ = {isa = PBXBuildFile; fileRef = 83766D431A0E9C53008077E1 /* epubReadingSystem.js */; };
 		83766D471A0E9C77008077E1 /* epubReadingSystem.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83766D431A0E9C53008077E1 /* epubReadingSystem.js */; };
@@ -158,6 +159,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2BA7D9401B3864240055CF20 /* LOXCredentialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOXCredentialController.h; sourceTree = "<group>"; };
+		2BA7D9411B3864240055CF20 /* LOXCredentialController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LOXCredentialController.mm; sourceTree = "<group>"; };
 		552FC46516F39AB5000E73BA /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		558E562716EF859800FCF273 /* ePub3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ePub3.xcodeproj; path = "readium-sdk/Platform/Apple/ePub3.xcodeproj"; sourceTree = "<group>"; };
 		83766D431A0E9C53008077E1 /* epubReadingSystem.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = epubReadingSystem.js; path = LauncherOSX/ReaderScripts/epubReadingSystem.js; sourceTree = "<group>"; };
@@ -607,6 +610,8 @@
 		AD8C872729A8092A25A2BAE4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2BA7D9401B3864240055CF20 /* LOXCredentialController.h */,
+				2BA7D9411B3864240055CF20 /* LOXCredentialController.mm */,
 				85F74E6116C32A9900D29953 /* LOXPageNumberTextController.h */,
 				85F74E6216C32A9900D29953 /* LOXPageNumberTextController.mm */,
 				850B1A9316A6320200619C3C /* LOXSpineViewController.h */,
@@ -850,6 +855,7 @@
 				A250D13E6E7432CF2A40E446 /* DDLog.m in Sources */,
 				A250D744D6B11E11ED5EBD34 /* ContextFilterLogFormatter.m in Sources */,
 				A250DBBAE4D1A71F94E7290A /* DispatchQueueLogFormatter.m in Sources */,
+				2BA7D9421B3864240055CF20 /* LOXCredentialController.mm in Sources */,
 				A250DA45DF0ACCA38ED50DB0 /* DDASLLogger.m in Sources */,
 				A250D1E2A3BFDE4B6603C02F /* DDTTYLogger.m in Sources */,
 				A250DBE5055F6CDD04051D05 /* DDFileLogger.m in Sources */,

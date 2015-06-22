@@ -51,4 +51,6 @@ namespace ePub3 {
 
 - (LOXPackage *)openFile:(NSString *)file;
 
+- (bool) checkActionPrint;
+
 @end
