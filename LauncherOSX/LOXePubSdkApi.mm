@@ -159,9 +159,12 @@ void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)
 
      _container = ePub3::Container::OpenContainer([file UTF8String]);
 
+    // Added by DRM inside, H.S. Lee on 2015-04-23
+    // Without the checking validity of the container pointer, app. could be crashed.
     if(_container == nullptr) {
         return nil;
     }
+    ////////
     
     [self readPackages];
 
@@ -174,6 +177,9 @@ void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)
 
 - (void)readPackages
 {
+    // Modified by DRM inside, H.S. Lee on 2015-04-23
+    // Without the checking validity of the container pointer, app. could be crashed.
+    
     if(_container != nullptr) {
         auto packages = _container->Packages();
 
@@ -197,6 +203,9 @@ void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)
     _currentPackage = nil;
 }
 
+
+// Added by DRM inside, H.S. Lee on 2015-04-23
+// To handle checking user rights for the 'print' action
 - (bool) checkActionPrint
 {
     if(_container->Creator() != nullptr){

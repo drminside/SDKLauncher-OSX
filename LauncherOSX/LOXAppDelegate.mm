@@ -47,9 +47,9 @@
 #import "LOXMediaOverlay.h"
 #import "LOXMediaOverlayController.h"
 
-/* added by hslee 15/04/28 */
+// added by DRM inside, H.S. Lee on 2015-04-21
+// To provide password dialog dialog
 #import "LOXCredentialController.h"
-/* end added */
 
 using namespace ePub3;
 
@@ -67,9 +67,10 @@ extern NSString *const LOXPageChangedEvent;
 
 - (bool)openDocumentWithPath:(NSString *)path;
 
-/* added by hslee 15/04/28 */
+// added by DRM inside, H.S. Lee on 2015-04-21
+// To provide password dialog dialog
 @property (strong) LOXCredentialController *credentialController;
-/* end added */
+
 @end
 
 
@@ -203,20 +204,18 @@ extern NSString *const LOXPageChangedEvent;
     return book;
 }
 
-/* modified by ych 15/04/23 */
-/*
- 리턴이 FALSE로 나가면 선택한 파일은 이 프로그램에서 열 수 없다는 메시지가 뜨는데
- 비밀번호 입력에서 취소를 했을 때 위 메시지가 떠서 맞지 않는 것 같음.
- 상세 메시지는 자체 에러 핸들러 사용 하는것이 어떨지??
- */
+
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
+    // Modified by DRM inside, C.H Yu on 2015-04-23
+    // To handle behavior of the 'cancel' button of the passowrd input dialog
+
+    //return [self openDocumentWithPath:filename];
+
     [self openDocumentWithPath:filename];
     
     return TRUE;
 }
-/* end modified */
-
 
 
 
@@ -288,6 +287,9 @@ extern NSString *const LOXPageChangedEvent;
     [self.preferencesController showPreferences:_userData.preferences];
 }
 
+
+// Added by DRM inside, H.S. Lee on 2015-04-23
+// To handle checking user rights for the 'print' action
 - (IBAction)OpenPrint:(id)sender {
     
     if (_epubApi!=nullptr &&[_epubApi checkActionPrint]) {
