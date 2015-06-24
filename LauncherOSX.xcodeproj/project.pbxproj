@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CB25A171B3A5BD600290688 /* expired_date_555-5555.epub in Resources */ = {isa = PBXBuildFile; fileRef = 1CB25A141B3A5BD600290688 /* expired_date_555-5555.epub */; };
+		1CB25A181B3A5BD600290688 /* noprint_555-5555.epub in Resources */ = {isa = PBXBuildFile; fileRef = 1CB25A151B3A5BD600290688 /* noprint_555-5555.epub */; };
+		1CB25A191B3A5BD600290688 /* print_0_555-5555.epub in Resources */ = {isa = PBXBuildFile; fileRef = 1CB25A161B3A5BD600290688 /* print_0_555-5555.epub */; };
 		2BA7D9421B3864240055CF20 /* LOXCredentialController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7D9411B3864240055CF20 /* LOXCredentialController.mm */; };
 		552FC46616F39AB5000E73BA /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 552FC46516F39AB5000E73BA /* icon.icns */; };
 		83766D441A0E9C53008077E1 /* epubReadingSystem.js in Resources */ = {isa = PBXBuildFile; fileRef = 83766D431A0E9C53008077E1 /* epubReadingSystem.js */; };
@@ -159,6 +162,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CB25A141B3A5BD600290688 /* expired_date_555-5555.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "expired_date_555-5555.epub"; sourceTree = "<group>"; };
+		1CB25A151B3A5BD600290688 /* noprint_555-5555.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "noprint_555-5555.epub"; sourceTree = "<group>"; };
+		1CB25A161B3A5BD600290688 /* print_0_555-5555.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "print_0_555-5555.epub"; sourceTree = "<group>"; };
 		2BA7D9401B3864240055CF20 /* LOXCredentialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOXCredentialController.h; sourceTree = "<group>"; };
 		2BA7D9411B3864240055CF20 /* LOXCredentialController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LOXCredentialController.mm; sourceTree = "<group>"; };
 		552FC46516F39AB5000E73BA /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
@@ -332,6 +338,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CB25A131B3A5BD600290688 /* ePubs_Encrypted */ = {
+			isa = PBXGroup;
+			children = (
+				1CB25A141B3A5BD600290688 /* expired_date_555-5555.epub */,
+				1CB25A151B3A5BD600290688 /* noprint_555-5555.epub */,
+				1CB25A161B3A5BD600290688 /* print_0_555-5555.epub */,
+			);
+			path = ePubs_Encrypted;
+			sourceTree = "<group>";
+		};
 		552FC46A16F39AD0000E73BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +388,7 @@
 		8597D60216824655000FAAAF = {
 			isa = PBXGroup;
 			children = (
+				1CB25A131B3A5BD600290688 /* ePubs_Encrypted */,
 				83A68A3B1993D7D100DED991 /* mathjax */,
 				558E562716EF859800FCF273 /* ePub3.xcodeproj */,
 				552FC46A16F39AD0000E73BA /* Resources */,
@@ -771,11 +788,14 @@
 				552FC46616F39AB5000E73BA /* icon.icns in Resources */,
 				85C2219F1795C607004B8E1E /* PreferencesDlg.xib in Resources */,
 				AD8C8A2A8F33046528CAC333 /* sample_styles.css in Resources */,
+				1CB25A181B3A5BD600290688 /* noprint_555-5555.epub in Resources */,
+				1CB25A171B3A5BD600290688 /* expired_date_555-5555.epub in Resources */,
 				AD8C83FC6397F6AECC59F1FF /* ico_rate.png in Resources */,
 				AD8C880A9CBF3B579B85F659 /* ico_tts.png in Resources */,
 				851FFCFE17DCFBF90090BA3C /* green_dot_big.png in Resources */,
 				A250DE64B96BCDF9916905E4 /* About.txt in Resources */,
 				A250D3231482DF2070916DB8 /* README.txt in Resources */,
+				1CB25A191B3A5BD600290688 /* print_0_555-5555.epub in Resources */,
 				A250D31BB36C682AF2D37B16 /* About.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
