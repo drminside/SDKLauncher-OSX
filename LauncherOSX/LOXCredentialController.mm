@@ -54,8 +54,6 @@ NSWindow *window_main;
 
 - (void)openDlgFromCredentialRequest:(ePub3::CredentialRequest&)request
 {
-    
-    //두번째 팝업에서 복사하는 문제
     reqPtr = &request;
     
     credentialDictionary = [[NSMutableDictionary alloc] init];
@@ -152,8 +150,6 @@ NSWindow *window_main;
         
     }
     
-    
-    
     window_main = credentialDlg;
     
     [NSApp beginSheet: credentialDlg
@@ -163,7 +159,8 @@ NSWindow *window_main;
           contextInfo: nil];
     
     NSInteger result = [NSApp runModalForWindow: credentialDlg];
-    //ok 버튼을 눌렀을때
+
+    //ok
     if (result == NSModalResponseStop)
     {
         NSArray *keys = [credentialDictionary allKeys];
@@ -177,7 +174,7 @@ NSWindow *window_main;
         }
         reqPtr->SignalCompletion();
     }
-    //cancel 버튼을 눌렀을때
+    //cancel
     else if (result == NSModalResponseAbort)
     {
         reqPtr->SignalCompletion();
@@ -193,7 +190,7 @@ NSWindow *window_main;
     
 }
 
-//인풋 컴포넌트 설정
+//set credential component
 - (id)addCredentialInputWithTitle:(NSString *)title value:(NSString *)value idx:(NSInteger)idx isPasswordType:(BOOL)isPwd mainView:(NSView *) mainView parentHeight:(NSInteger)pHeight
 {
     NSTextField *label = [[NSTextField alloc] initWithFrame:NSMakeRect(34, 65, 80, 22)];
@@ -221,7 +218,7 @@ NSWindow *window_main;
     }
 }
 
-//캔슬버튼 설정
+//set cancel button
 - (void)addCancelButtonInputWithTitle:(NSString*)title idx:(NSInteger)idx setAction:(SEL)action mainView:(NSView *)mainView parentHeight:(NSInteger)pHeight
 {
     NSButton *button = [[NSButton alloc] initWithFrame:NSMakeRect(240, 18, 84, 27)];
@@ -232,7 +229,8 @@ NSWindow *window_main;
     [button setTag:idx];
     [mainView addSubview:button];
 }
-//버튼 설정
+
+//set button
 - (void)addButtonInputWithTitle:(NSString*)title idx:(NSInteger)idx setAction:(SEL)action mainView:(NSView *)mainView parentHeight:(NSInteger)pHeight
 {
     NSButton *button = [[NSButton alloc] initWithFrame:NSMakeRect(29, 18, 144, 27)];
@@ -244,7 +242,7 @@ NSWindow *window_main;
     [mainView addSubview:button];
 }
 
-//버튼핸들러 실행 함수
+//run button handler function
 - (void)buttonFromIndex:(id) sender
 {
     NSButton * btn = (NSButton *)sender;
@@ -252,7 +250,6 @@ NSWindow *window_main;
     
     reqPtr->SetPressedButtonIndex(idx);
     
-    //인덱스로 버튼 핸들러 실행
     auto t = reqPtr->GetButtonHandler(idx);
     t(nullptr, idx);
     

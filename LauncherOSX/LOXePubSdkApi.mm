@@ -50,8 +50,6 @@
 
 - (void)readPackages;
 
-- (void) setReq:(ePub3::CredentialRequest&)_req;
-
 @end
 
 @implementation LOXePubSdkApi {
@@ -60,15 +58,6 @@
     ePub3::ContainerPtr _container;
 
     LOXPackage* _currentPackage;
-    
-    ePub3::CredentialRequest* req;
-    
-    id thisClass;
-}
-
-- (void) setReq:(ePub3::CredentialRequest&)_req
-{
-    req = &_req;
 }
 
 static BOOL m_ignoreRemainingErrors = NO;
@@ -147,8 +136,6 @@ void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)
 
         _packages = [NSMutableArray array];
     }
-    //hslee
-    thisClass = self;
 
     return self;
 }

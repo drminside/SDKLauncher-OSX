@@ -47,10 +47,6 @@
 #import "LOXMediaOverlay.h"
 #import "LOXMediaOverlayController.h"
 
-// added by DRM inside, H.S. Lee on 2015-04-21
-// To provide password dialog dialog
-#import "LOXCredentialController.h"
-
 using namespace ePub3;
 
 //FOUNDATION_EXPORT
@@ -66,10 +62,6 @@ extern NSString *const LOXPageChangedEvent;
 - (void)onPageChanged:(id)onPageChanged;
 
 - (bool)openDocumentWithPath:(NSString *)path;
-
-// added by DRM inside, H.S. Lee on 2015-04-21
-// To provide password dialog dialog
-@property (strong) LOXCredentialController *credentialController;
 
 @end
 
