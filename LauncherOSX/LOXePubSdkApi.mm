@@ -33,13 +33,14 @@
 #import <ePub3/container.h>
 #import <ePub3/nav_table.h>
 #include <ePub3/initialization.h>
+#include <lcp/initialization.h>
 
 #include <ePub3/utilities/error_handler.h>
 
 #import "LOXSpineItem.h"
 #import "LOXPackage.h"
 
-#include <LCP/authentication_handler.h>
+//#include <LCP/authentication_handler.h>
 #import "LOXCredentialController.h"
 #import "LOXAppDelegate.h"
 #import <ePub3/user_action.h>
@@ -116,10 +117,10 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
     ePub3::SetErrorHandler(launcherErrorHandler);
 
     ePub3::InitializeSdk();
-    ePub3::PopulateFilterManager();
     
-    ePub3::AuthenticationHandlerFn launcherAuthenticationHandler = LauncherAuthenticationHandler;
-    ePub3::SetAuthenticationHandler(launcherAuthenticationHandler);
+    // LCP content module and authentication handerl ininitialization
+    lcp::Initialize(LauncherAuthenticationHandler);
+
 }
 
 void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)

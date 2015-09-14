@@ -23,7 +23,7 @@
 
 #import "LOXCredentialController.h"
 #import "LOXAppDelegate.h"
-#import "LCP/authentication_handler.h"
+#import "ePub3/credential_request.h"
 
 #import <QuartzCore/CoreAnimation.h>
 

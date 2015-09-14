@@ -22,7 +22,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "LCP/authentication_handler.h"
+#import "LCP/content_module_lcp.h"
 
 @interface LOXCredentialController : NSWindowController
 
