@@ -40,8 +40,6 @@
 #import "LOXSpineItem.h"
 #import "LOXPackage.h"
 
-//#include <LCP/authentication_handler.h>
-#import "LOXCredentialController.h"
 #import "LOXAppDelegate.h"
 #import <ePub3/user_action.h>
 
@@ -118,15 +116,7 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
     ePub3::InitializeSdk();
     
-    // LCP content module and authentication handerl ininitialization
-    lcp::Initialize(LauncherAuthenticationHandler);
-
-}
-
-void LauncherAuthenticationHandler(ePub3::CredentialRequest& request)
-{
-    LOXCredentialController *lcc = [[LOXCredentialController alloc] init];
-    [lcc openDlgFromCredentialRequest:request];
+    lcp::Initialize();
 }
 
 - (id)init
