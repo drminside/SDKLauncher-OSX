@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2A4CDA7883E774AAA9611F9DF1061288088F6058",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2A4CDA7883E774AAA9611F9DF1061288088F6058" : 0,
+    "F8C32D692E6AB1266FF5E638235F20C8AD03E158" : 0,
+    "AD4E54206183D886987A2A3031947817F2F202B6" : 0,
+    "7EA574B7954BB140EB4FDBD252E584FCDFCE648C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3AB28354-45D5-4FC0-B8F1-F435C65D2252",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2A4CDA7883E774AAA9611F9DF1061288088F6058" : "SDKLauncher-OSX-for-demo-1106\/",
+    "F8C32D692E6AB1266FF5E638235F20C8AD03E158" : "SDKLauncher-OSX-for-demo-1106\/readium-drm\/",
+    "AD4E54206183D886987A2A3031947817F2F202B6" : "SDKLauncher-OSX-for-demo-1106\/readium-shared-js\/",
+    "7EA574B7954BB140EB4FDBD252E584FCDFCE648C" : "SDKLauncher-OSX-for-demo-1106\/readium-sdk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LauncherOSX",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LauncherOSX.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/drminside\/SDKLauncher-OSX.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A4CDA7883E774AAA9611F9DF1061288088F6058"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/readium\/readium-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EA574B7954BB140EB4FDBD252E584FCDFCE648C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/readium\/readium-shared-js.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD4E54206183D886987A2A3031947817F2F202B6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/drminside\/readium-drm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F8C32D692E6AB1266FF5E638235F20C8AD03E158"
+    }
+  ]
+}
