@@ -115,6 +115,7 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
     ePub3::SetErrorHandler(launcherErrorHandler);
 
     ePub3::InitializeSdk();
+    ePub3::PopulateFilterManager();
     
     // If launcher wants to include DRM feature,
     // READIUM_DRM=1 should be defined in the preporessor macros section
