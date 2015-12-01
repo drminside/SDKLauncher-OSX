@@ -39,10 +39,6 @@
 		851FFCFE17DCFBF90090BA3C /* green_dot_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 851FFCFD17DCFBF90090BA3C /* green_dot_big.png */; };
 		855CFDB61696200B00AD311E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855CFDB51696200B00AD311E /* WebKit.framework */; };
 		855CFE4B169B912300AD311E /* LOXePubSdkApi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 855CFE4A169B912300AD311E /* LOXePubSdkApi.mm */; };
-		855CFEE8169DFA3E00AD311E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 855CFEE7169DFA3D00AD311E /* libz.dylib */; };
-		8561A1F0178B6F1B007D15D3 /* js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8561A1E6178B6ED1007D15D3 /* js */; };
-		8561A1F1178B6F1E007D15D3 /* lib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8561A1E7178B6ED1007D15D3 /* lib */; };
-		8561A1F3178B6F25007D15D3 /* reader.html in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8561A1E9178B6ED1007D15D3 /* reader.html */; };
 		856354F716DE7C3A009DA283 /* BookmarkDlg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 856354F616DE7C3A009DA283 /* BookmarkDlg.xib */; };
 		856354FA16DEB3AF009DA283 /* LOXBookmarkEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856354F916DEB3AF009DA283 /* LOXBookmarkEditController.m */; };
 		8578F14A16D4095F003914EB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8578F14816D4095F003914EB /* Model.xcdatamodeld */; };
@@ -121,40 +117,33 @@
 			remoteGlobalIDString = E32DF8E91BB27FD600B6BF1A;
 			remoteInfo = "lcp-iOS";
 		};
+		FFD52D091C0D3E3D00A2B2EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFD52D031C0D3E3D00A2B2EC /* ePub3.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABA72C241655382E003125FF;
+			remoteInfo = ePub3;
+		};
+		FFD52D0B1C0D3E3D00A2B2EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFD52D031C0D3E3D00A2B2EC /* ePub3.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABA4BAE016ADF5A600161B77;
+			remoteInfo = "ePub3-iOS";
+		};
+		FFD52D0D1C0D3E3D00A2B2EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFD52D031C0D3E3D00A2B2EC /* ePub3.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB61CE4A1694845700299BB1;
+			remoteInfo = UnitTests;
+		};
 		FFF9FC811BA3F3380079F730 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFF9FC7D1BA3F3380079F730 /* lcp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = FFF9FBF91BA32AA70079F730;
 			remoteInfo = lcp;
-		};
-		FFF9FC8F1BA3F3750079F730 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ABA72C241655382E003125FF;
-			remoteInfo = ePub3;
-		};
-		FFF9FC911BA3F3750079F730 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ABA4BAE016ADF5A600161B77;
-			remoteInfo = "ePub3-iOS";
-		};
-		FFF9FC931BA3F3750079F730 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AB61CE4A1694845700299BB1;
-			remoteInfo = UnitTests;
-		};
-		FFF9FC951BA3F3CB0079F730 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = ABA72C231655382E003125FF;
-			remoteInfo = ePub3;
 		};
 		FFF9FC971BA3F3D10079F730 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -209,7 +198,6 @@
 
 /* Begin PBXFileReference section */
 		552FC46516F39AB5000E73BA /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		558E562716EF859800FCF273 /* ePub3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ePub3.xcodeproj; path = "readium-sdk/Platform/Apple/ePub3.xcodeproj"; sourceTree = "<group>"; };
 		83412B271AC98D530074111F /* readium-external-libs.js.bundles.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "readium-external-libs.js.bundles.js"; path = "readium-shared-js/build-output/_multiple-bundles/readium-external-libs.js.bundles.js"; sourceTree = "<group>"; };
 		83412B2A1AC98D530074111F /* readium-shared-js.js.bundles.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "readium-shared-js.js.bundles.js"; path = "readium-shared-js/build-output/_multiple-bundles/readium-shared-js.js.bundles.js"; sourceTree = "<group>"; };
 		83766D431A0E9C53008077E1 /* epubReadingSystem.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = epubReadingSystem.js; path = LauncherOSX/ReaderScripts/epubReadingSystem.js; sourceTree = "<group>"; };
@@ -372,10 +360,10 @@
 		AD8C8F410069609045A3F696 /* LOXSampleStylesProvider.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LOXSampleStylesProvider.mm; sourceTree = "<group>"; };
 		AD8C8FBED8EFF09E6381C68F /* LOXBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOXBookmarksController.h; sourceTree = "<group>"; };
 		AD8C8FEC6F5BC3C8D400A388 /* LOXCurrentPagesInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LOXCurrentPagesInfo.mm; sourceTree = "<group>"; };
+		FFD52D031C0D3E3D00A2B2EC /* ePub3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ePub3.xcodeproj; path = "readium-sdk/Platform/Apple/ePub3.xcodeproj"; sourceTree = "<group>"; };
 		FFF9FC2E1BA37C9A0079F730 /* liblcp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblcp.a; path = "readium-drm/LCP/Platform/Apple/build/Debug/liblcp.a"; sourceTree = "<group>"; };
 		FFF9FC3F1BA3C5C90079F730 /* liblcp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblcp.a; path = "../Library/Developer/Xcode/DerivedData/LauncherOSX-ekwwabmxqadqpddfqksebfxfshpx/Build/Products/Debug/liblcp.a"; sourceTree = "<group>"; };
 		FFF9FC7D1BA3F3380079F730 /* lcp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lcp.xcodeproj; path = "readium-drm/LCP/Platform/Apple/lcp.xcodeproj"; sourceTree = "<group>"; };
-		FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ePub3.xcodeproj; path = "readium-sdk/Platform/Apple/ePub3.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,10 +429,8 @@
 		8597D60216824655000FAAAF = {
 			isa = PBXGroup;
 			children = (
-				558E562716EF859800FCF273 /* ePub3.xcodeproj */,
-				FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */,
+				FFD52D031C0D3E3D00A2B2EC /* ePub3.xcodeproj */,
 				FFF9FC7D1BA3F3380079F730 /* lcp.xcodeproj */,
-				83A68A3B1993D7D100DED991 /* mathjax */,
 				552FC46A16F39AD0000E73BA /* Resources */,
 				8561A1E4178B6EB8007D15D3 /* Scripts */,
 				850B1A5A16A61FB900619C3C /* ePub3.dylib */,
@@ -748,21 +734,21 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		FFD52D041C0D3E3D00A2B2EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFD52D0A1C0D3E3D00A2B2EC /* ePub3.dylib */,
+				FFD52D0C1C0D3E3D00A2B2EC /* libePub3-iOS.a */,
+				FFD52D0E1C0D3E3D00A2B2EC /* UnitTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FFF9FC7E1BA3F3380079F730 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				FFF9FC821BA3F3380079F730 /* liblcp.a */,
 				2BEA435A1BCCFD9D00A5B406 /* liblcp-iOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FFF9FC8A1BA3F3750079F730 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FFF9FC901BA3F3750079F730 /* ePub3.dylib */,
-				FFF9FC921BA3F3750079F730 /* libePub3-iOS.a */,
-				FFF9FC941BA3F3750079F730 /* UnitTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -786,7 +772,6 @@
 			);
 			dependencies = (
 				FFF9FC981BA3F3D10079F730 /* PBXTargetDependency */,
-				FFF9FC961BA3F3CB0079F730 /* PBXTargetDependency */,
 			);
 			name = LauncherOSX;
 			productName = LauncherOSX;
@@ -814,8 +799,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FFF9FC8A1BA3F3750079F730 /* Products */;
-					ProjectRef = FFF9FC891BA3F3750079F730 /* ePub3.xcodeproj */;
+					ProductGroup = FFD52D041C0D3E3D00A2B2EC /* Products */;
+					ProjectRef = FFD52D031C0D3E3D00A2B2EC /* ePub3.xcodeproj */;
 				},
 				{
 					ProductGroup = FFF9FC7E1BA3F3380079F730 /* Products */;
@@ -837,32 +822,32 @@
 			remoteRef = 2BEA43591BCCFD9D00A5B406 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FFD52D0A1C0D3E3D00A2B2EC /* ePub3.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = ePub3.dylib;
+			remoteRef = FFD52D091C0D3E3D00A2B2EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FFD52D0C1C0D3E3D00A2B2EC /* libePub3-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libePub3-iOS.a";
+			remoteRef = FFD52D0B1C0D3E3D00A2B2EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FFD52D0E1C0D3E3D00A2B2EC /* UnitTests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = UnitTests;
+			remoteRef = FFD52D0D1C0D3E3D00A2B2EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FFF9FC821BA3F3380079F730 /* liblcp.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = liblcp.a;
 			remoteRef = FFF9FC811BA3F3380079F730 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FFF9FC901BA3F3750079F730 /* ePub3.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = ePub3.dylib;
-			remoteRef = FFF9FC8F1BA3F3750079F730 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FFF9FC921BA3F3750079F730 /* libePub3-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libePub3-iOS.a";
-			remoteRef = FFF9FC911BA3F3750079F730 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FFF9FC941BA3F3750079F730 /* UnitTests */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = UnitTests;
-			remoteRef = FFF9FC931BA3F3750079F730 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -989,11 +974,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FFF9FC961BA3F3CB0079F730 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ePub3;
-			targetProxy = FFF9FC951BA3F3CB0079F730 /* PBXContainerItemProxy */;
-		};
 		FFF9FC981BA3F3D10079F730 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = lcp;
