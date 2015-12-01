@@ -33,13 +33,15 @@
 #import <ePub3/container.h>
 #import <ePub3/nav_table.h>
 #include <ePub3/initialization.h>
+#include <lcp/initialization.h>
 
 #include <ePub3/utilities/error_handler.h>
 
 #import "LOXSpineItem.h"
 #import "LOXPackage.h"
 
-
+#import "LOXAppDelegate.h"
+#import <ePub3/user_action.h>
 
 @interface LOXePubSdkApi ()
 
@@ -113,7 +115,8 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
     ePub3::SetErrorHandler(launcherErrorHandler);
 
     ePub3::InitializeSdk();
-    ePub3::PopulateFilterManager();
+    
+    lcp::Initialize();
 }
 
 - (id)init
@@ -134,6 +137,13 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
      _container = ePub3::Container::OpenContainer([file UTF8String]);
 
+    // Added by DRM inside, H.S. Lee on 2015-04-23
+    // Without the checking validity of the container pointer, app. could be crashed.
+    if(_container == nullptr) {
+        return nil;
+    }
+    ////////
+    
     [self readPackages];
 
     if([_packages count] > 0) {
@@ -145,11 +155,16 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
 - (void)readPackages
 {
-    auto packages = _container->Packages();
+    // Modified by DRM inside, H.S. Lee on 2015-04-23
+    // Without the checking validity of the container pointer, app. could be crashed.
+    
+    if(_container != nullptr) {
+        auto packages = _container->Packages();
 
-    for (auto package = packages.begin(); package != packages.end(); ++package) {
+        for (auto package = packages.begin(); package != packages.end(); ++package) {
 
-        [_packages addObject:[[LOXPackage alloc] initWithSdkPackage:*package]];
+            [_packages addObject:[[LOXPackage alloc] initWithSdkPackage:*package]];
+        }
     }
 }
 
@@ -167,8 +182,20 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 }
 
 
-
-
-
+// Added by DRM inside, H.S. Lee on 2015-04-23
+// To handle checking user rights for the 'print' action
+- (bool) checkActionPrint
+{
+    if(_container->Creator() != nullptr){
+        ePub3::async_result<bool> result = _container->Creator()->ApproveUserAction(ePub3::UserAction(ePub3::ConstManifestItemPtr(nullptr), ePub3::CFI(), ePub3::ActionType::Print));
+        
+        return result.get();
+    }
+    else
+    {
+        return false;
+    }
+    
+}
 
 @end
