@@ -41,7 +41,6 @@
 
 #import "LOXAppDelegate.h"
 #import <ePub3/user_action.h>
-
 #import "drmInitialize.h"
 
 @interface LOXePubSdkApi ()
@@ -164,7 +163,6 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 {
     // Modified by DRM inside, H.S. Lee on 2015-04-23
     // Without the checking validity of the container pointer, app. could be crashed.
-    
     if(_container != nullptr) {
         auto packages = _container->Packages();
 
@@ -193,7 +191,8 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 // To handle checking user rights for the 'print' action
 - (bool) checkActionPrint
 {
-    if(_container->Creator() != nullptr){
+    if(_container->Creator() != nullptr)
+    {
         ePub3::async_result<bool> result = _container->Creator()->ApproveUserAction(ePub3::UserAction(ePub3::ConstManifestItemPtr(nullptr), ePub3::CFI(), ePub3::ActionType::Print));
         
         return result.get();

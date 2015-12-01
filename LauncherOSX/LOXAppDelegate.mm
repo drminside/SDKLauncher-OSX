@@ -196,7 +196,6 @@ extern NSString *const LOXPageChangedEvent;
     return book;
 }
 
-
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
     // Modified by DRM inside, C.H Yu on 2015-04-23
