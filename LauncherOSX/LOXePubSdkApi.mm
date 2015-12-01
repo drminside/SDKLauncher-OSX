@@ -33,7 +33,6 @@
 #import <ePub3/container.h>
 #import <ePub3/nav_table.h>
 #include <ePub3/initialization.h>
-#include <lcp/initialization.h>
 
 #include <ePub3/utilities/error_handler.h>
 
@@ -42,6 +41,8 @@
 
 #import "LOXAppDelegate.h"
 #import <ePub3/user_action.h>
+
+#import "drmInitialize.h"
 
 @interface LOXePubSdkApi ()
 
@@ -116,7 +117,13 @@ bool LauncherErrorHandler(const ePub3::error_details& err)
 
     ePub3::InitializeSdk();
     
-    lcp::Initialize();
+    // If launcher wants to include DRM feature,
+    // READIUM_DRM=1 should be defined in the preporessor macros section
+    // in the project configuration
+#ifdef _READIUM_DRM_
+    [[[DrmInitialize alloc] init] initialize];
+#endif
+    
 }
 
 - (id)init
