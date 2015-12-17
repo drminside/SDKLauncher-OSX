@@ -107,6 +107,7 @@
 		AD8C8AAB286212996B85854B /* LOXCSSParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8C83B00F9FB913F1AA9F05 /* LOXCSSParser.mm */; };
 		AD8C8D0C7929CFD9F068D423 /* LOXBookmarksController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8C8D529AEBFEB697DDD1A6 /* LOXBookmarksController.mm */; };
 		AD8C8EFDC93A1A1F1B7B9509 /* LOXToc.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8C8CAC243F70317D0AE999 /* LOXToc.mm */; };
+		FFEB483B1C22685F00017B3E /* liblcp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFEB48371C22684500017B3E /* liblcp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = ABA72C231655382E003125FF;
 			remoteInfo = ePub3;
+		};
+		FFEB48361C22684500017B3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFEB482F1C22684500017B3E /* lcp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FFF9FBF91BA32AA70079F730;
+			remoteInfo = lcp;
+		};
+		FFEB48381C22684500017B3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFEB482F1C22684500017B3E /* lcp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E32DF8E91BB27FD600B6BF1A;
+			remoteInfo = "lcp-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -349,6 +364,7 @@
 		AD8C8FBED8EFF09E6381C68F /* LOXBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOXBookmarksController.h; sourceTree = "<group>"; };
 		AD8C8FEC6F5BC3C8D400A388 /* LOXCurrentPagesInfo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LOXCurrentPagesInfo.mm; sourceTree = "<group>"; };
 		FFE961B91C0E81FA00FA2A5C /* drmInitialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drmInitialize.h; sourceTree = "<group>"; };
+		FFEB482F1C22684500017B3E /* lcp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lcp.xcodeproj; path = "readium-drm/LCP/Platform/Apple/lcp.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +372,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFEB483B1C22685F00017B3E /* liblcp.a in Frameworks */,
 				850B1A5B16A61FB900619C3C /* ePub3.dylib in Frameworks */,
 				855CFEE8169DFA3E00AD311E /* libz.dylib in Frameworks */,
 				855CFDB61696200B00AD311E /* WebKit.framework in Frameworks */,
@@ -423,6 +440,7 @@
 		8597D60216824655000FAAAF = {
 			isa = PBXGroup;
 			children = (
+				FFEB482F1C22684500017B3E /* lcp.xcodeproj */,
 				558E562716EF859800FCF273 /* ePub3.xcodeproj */,
 				552FC46A16F39AD0000E73BA /* Resources */,
 				8561A1E4178B6EB8007D15D3 /* Scripts */,
@@ -726,6 +744,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		FFEB48301C22684500017B3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFEB48371C22684500017B3E /* liblcp.a */,
+				FFEB48391C22684500017B3E /* liblcp-iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -775,6 +802,10 @@
 					ProductGroup = 558E562816EF859800FCF273 /* Products */;
 					ProjectRef = 558E562716EF859800FCF273 /* ePub3.xcodeproj */;
 				},
+				{
+					ProductGroup = FFEB48301C22684500017B3E /* Products */;
+					ProjectRef = FFEB482F1C22684500017B3E /* lcp.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -803,6 +834,20 @@
 			fileType = "compiled.mach-o.executable";
 			path = UnitTests;
 			remoteRef = 558E563116EF859800FCF273 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FFEB48371C22684500017B3E /* liblcp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblcp.a;
+			remoteRef = FFEB48361C22684500017B3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FFEB48391C22684500017B3E /* liblcp-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "liblcp-iOS.a";
+			remoteRef = FFEB48381C22684500017B3E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1027,6 +1072,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LauncherOSX/LauncherOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"_READIUM_DRM_=1",
+				);
 				HEADER_SEARCH_PATHS = (
 					"${SRCROOT}/readium-sdk/Platform/Apple/include",
 					/usr/include/libxml2,
